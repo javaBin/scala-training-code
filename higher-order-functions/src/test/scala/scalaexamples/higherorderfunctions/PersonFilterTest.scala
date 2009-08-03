@@ -1,8 +1,7 @@
 package scalaexamples.higherorderfunctions
 
-import junit.framework.{Test, TestCase, TestSuite}
+import junit.framework.TestCase
 import junit.framework.Assert._
-import junit.textui.TestRunner
 
 class PersonFilterTest extends TestCase("PersonFilter") {
   
