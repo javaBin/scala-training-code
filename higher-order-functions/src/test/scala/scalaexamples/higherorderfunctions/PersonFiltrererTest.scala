@@ -1,8 +1,8 @@
-package scalakurs
+package scalaexamples.higherorderfunctions
 
-import junit.framework._
+import junit.framework.{Test, TestCase, TestSuite}
+import junit.framework.Assert._
 import junit.textui.TestRunner
-import Assert._
 
 object PersonFiltrererTest {
   val suite: Test = new TestSuite(classOf[PersonFiltrererTest])

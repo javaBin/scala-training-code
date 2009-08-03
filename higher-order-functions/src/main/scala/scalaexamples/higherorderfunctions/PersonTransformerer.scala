@@ -1,4 +1,4 @@
-package scalakurs
+package scalaexamples.higherorderfunctions
 
 class PersonTransformerer {
 
