@@ -1,9 +1,12 @@
 package scalaexamples.higherorderfunctions
 
-import junit.framework.TestCase
 import junit.framework.Assert._
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.junit.runners.{JUnit4}
 
-class PersonFilterTest extends TestCase("PersonFilter") {
+@RunWith(classOf[JUnit4])
+class PersonFilterTest {
   
   val personFilter = new PersonFilter
   
@@ -14,24 +17,24 @@ class PersonFilterTest extends TestCase("PersonFilter") {
   val all = (p: Person) => true
   val none = (p: Person) => false
   
-  def testEmptyList {
+  @Test def testEmptyList {
     assertEquals(Nil, personFilter.filterPersons(Nil, none))
     assertEquals(Nil, personFilter.filterPersons(Nil, all))
   }
 
-  def testAll {
+  @Test def testAll {
     assertEquals(persons, personFilter.filterPersons(persons, all))
   }
   
-  def testNone {
+  @Test def testNone {
     assertEquals(Nil, personFilter.filterPersons(persons, none))
   }
   
-  def testOld {
+  @Test def testOld {
     assertEquals(fredrik :: Nil, personFilter.filterPersons(persons, _.age > 30))
   }
 
-  def testYoung {
+  @Test def testYoung {
     assertEquals(alf :: Nil, personFilter.filterPersons(persons, _.age <= 30))
   }
 
