@@ -142,7 +142,14 @@
   </build>
 
   <modules>
+	<module>intro</module>
+    <module>first-class-functions</module>
     <module>higher-order-functions</module>
+    <module>functional-programming</module>
+	<module>object-orientation</module>
+	<module>traits</module>
+	<module>type-hierarchy</module>
+	<module>pattern-matching</module>
   </modules>
 
   <reporting>
