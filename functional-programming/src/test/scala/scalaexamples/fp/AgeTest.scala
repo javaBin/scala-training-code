@@ -11,13 +11,14 @@ class AgeTest {
   val alf = Person("Alf", 30)
   val fredrik = Person("Fredrik", 33)
   val johannes = Person("Johannes", 0)
-  
+
   val persons = List(alf, fredrik, johannes)
   
   @Test def testAgeLimit {
-    val (kids, adults) = Utils.partitionByAge(persons, 18)
-    assertEquals(List(johannes), kids)
+    val (adults, kids) = persons partition { person => Person.checkAgeLimit(18, person) }
+
     assertEquals(List(alf, fredrik), adults)
+    assertEquals(List(johannes), kids)
   }
   
 }

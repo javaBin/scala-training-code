@@ -15,7 +15,7 @@ class NameTest {
   val persons = List(alf, fredrik, johannes)
   
   @Test def testName {
-    val names = Utils.getNames(persons)
+    val names = persons map Person.getName
     assertEquals(List("Alf", "Fredrik", "Johannes"), names)
   }
   
