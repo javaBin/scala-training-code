@@ -1,4 +1,4 @@
-package scalaexamples.fp
+package scalaexamples.firstclassfunctions
 
 case class Person(name: String, age: Int)
 
