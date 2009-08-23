@@ -10,8 +10,9 @@ class PersonTransformerTest {
 
   val personTransformer = new PersonTransformer
 
-  val alf = Person("Alf Kristian", "Støyle", 30)
-  val fredrik = Person("Fredrik", "Vraalsen", 33)
+  val alf = Person("Alf Kristian", 30)
+  val fredrik = Person("Fredrik", 33)
+  val johannes = Person("Johannes", 0)
   val persons = alf :: fredrik :: Nil
 
   @Test 
@@ -21,8 +22,8 @@ class PersonTransformerTest {
 
   @Test
   def testFirstName {
-    val expected = persons.map(_.firstName)
-    assertEquals(expected, personTransformer.transformPersons(persons, (p: Person) => p.firstName))
+    val expected = persons.map(_.name)
+    assertEquals(expected, personTransformer.transformPersons(persons, (p: Person) => p.name))
   }
   
   @Test

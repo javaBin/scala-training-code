@@ -10,9 +10,10 @@ class PersonFilterTest {
   
   val personFilter = new PersonFilter
   
-  val alf = Person("Alf Kristian", "Støyle", 30)
-  val fredrik = Person("Fredrik", "Vraalsen", 33)
-  val persons = alf :: fredrik :: Nil
+  val alf = Person("Alf Kristian", 30)
+  val fredrik = Person("Fredrik", 33)
+  val johannes = Person("Johannes", 0)
+  val persons = alf :: fredrik :: johannes :: Nil
   
   val all = (p: Person) => true
   val none = (p: Person) => false
@@ -35,12 +36,12 @@ class PersonFilterTest {
   
   @Test 
   def testOld {
-    assertEquals(fredrik :: Nil, personFilter.filterPersons(persons, _.age > 30))
+    assertEquals(alf :: fredrik :: Nil, personFilter.filterPersons(persons, _.age > 18))
   }
 
   @Test 
   def testYoung {
-    assertEquals(alf :: Nil, personFilter.filterPersons(persons, _.age <= 30))
+    assertEquals(johannes :: Nil, personFilter.filterPersons(persons, _.age <= 18))
   }
 
 }
