@@ -8,8 +8,9 @@ import org.junit.runners.JUnit4
 @RunWith(classOf[JUnit4])
 class ListMatchingTest {
 
+  val list = List("Scala", "is", "powerful")
+  
   @Test def matchFirstElementOfList {
-    val list = List("Scala", "is", "powerful")
     val mathedElement = list match {
       //case List(firstElement, lastElement) => firstElement
       case List(firstElement, _ *) => firstElement
@@ -20,7 +21,6 @@ class ListMatchingTest {
   }
   
   @Test def matchSecondElementOfList {
-	val list = List("Scala", "is", "powerful")
     val mathedElement = list match {
       //case List(firstElement, middle, lastElement) => middle
       //case List(_, middle, _) => middle
@@ -33,13 +33,14 @@ class ListMatchingTest {
 
   
   @Test def matchNestedLists {
-	val list = List("Scala", "is", "powerful", List("Indeed", "it", "is"))
-    val mathedElement = list match {
+	val nestedList = list :: List("Indeed", "it", "is")
+	// Same as list("Scala", "is", "powerful", List("Indeed", "it", "is")). If you want only one list use "list ::: List("Indeed", "it", "is")"
+    val mathedElement = nestedList match {
       case List(_, _, _, sublist) => sublist
       case _ => "failed"
     }
 
-    assertEquals(list(3), mathedElement)
+    assertEquals(nestedList(3), mathedElement)
   }
   
   @Test def matchNestedElementOfList {
