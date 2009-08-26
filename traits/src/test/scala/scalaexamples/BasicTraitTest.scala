@@ -10,14 +10,6 @@ import util.Sorting
 @RunWith(classOf[JUnit4])
 class BasicTraitTest {
   
-  @Test def mixInTraitTest {
-    val myElement = new Element(0) with MethodTrait
-    assertEquals("a value", myElement.mixedInValue)
-    
-    val anotherElement = new Element(0) with MethodTrait { override val mixedInValue = "another value" }
-    assertEquals("another value", anotherElement.mixedInValue)
-  }
-  
   val list = List(new Element(10), new Element(2))
   
   @Test def mixInOrderedTraitTest {
