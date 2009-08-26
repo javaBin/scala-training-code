@@ -23,5 +23,14 @@ class DynamicMixinTest {
     }
     assertNotNull(myElement.getSomeString)
   }
+  
+  
+  @Test def stackableTraitTest {
+	  // Hint make your own class here
+    class ElementWithStackableTrait(value: Int) extends Element(value) with SubClassTrait
+    val element = new ElementWithStackableTrait(1)
+    assertEquals("stacked toString, super toString is 'anIntValue is 1'", element.toString)
+  }
+  
 
 }
