@@ -10,10 +10,18 @@ class DynamicMixinTest {
   
   @Test def mixInTraitTest {
     val myElement = new Element(0) with MethodTrait
-    assertEquals("a value", myElement.mixedInValue)
+    assertEquals("a value", myElement.mixedInMethod)
     
-    val anotherElement = new Element(0) with MethodTrait { override val mixedInValue = "another value" }
-    assertEquals("another value", anotherElement.mixedInValue)
+    val anotherElement = new Element(0) with MethodTrait { override val mixedInMethod = "another value" }
+    assertEquals("another value", anotherElement.mixedInMethod)
+  }
+  
+  
+  @Test def mixInInterfaceTest {
+    val myElement = new Element(0) with InterfaceTrait {
+       def getSomeString = "Something"
+    }
+    assertNotNull(myElement.getSomeString)
   }
 
 }

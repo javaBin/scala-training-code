@@ -6,9 +6,15 @@ class Element(val anIntValue: Int) extends Ordered[Element] {
   
 }
 
+trait InterfaceTrait {
+  
+  def getSomeString
+  
+}
 
 trait MethodTrait {
   
-  def mixedInValue = "a value"
+  def mixedInMethod = "a value"
   
 }
+
