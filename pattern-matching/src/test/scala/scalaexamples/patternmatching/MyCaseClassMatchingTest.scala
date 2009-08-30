@@ -6,7 +6,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(classOf[JUnit4])
-class MyCaseClassMatching {
+class MyCaseClassMatchingTest {
   
   @Test def matchMySuperType {
      val theClass: MyCaseClass = FirstSubClass(1)
