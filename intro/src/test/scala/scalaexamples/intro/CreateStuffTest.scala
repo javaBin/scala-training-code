@@ -30,4 +30,12 @@ class CreateStuffTest {
     assertEquals("StuffObject", Stuff.getString)
   }
   
+  @Test def testSayHello {
+    assertEquals("Hello Alf", stuff.sayHello("Alf"))
+  }
+
+  @Test def testPrintHello {
+    assertEquals((), stuff.printHello("Alf"))
+  }
+  
 }
