@@ -1,4 +1,4 @@
-package scalaexamples
+package scalaexamples.patternmatching
 
 sealed abstract class MyCaseClass
 case class FirstSubClass(value: Int) extends MyCaseClass

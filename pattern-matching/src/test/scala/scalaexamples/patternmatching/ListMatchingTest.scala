@@ -1,4 +1,4 @@
-package scalaexamples
+package scalaexamples.patternmatching
 
 import junit.framework.Assert._
 import org.junit.Test
