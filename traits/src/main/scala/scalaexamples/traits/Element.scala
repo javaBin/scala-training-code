@@ -1,4 +1,4 @@
-package scalaexamples
+package scalaexamples.traits
 
 class Element(val anIntValue: Int) extends Ordered[Element] {
   
