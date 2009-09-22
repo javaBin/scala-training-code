@@ -23,8 +23,8 @@
   <inceptionYear>2009</inceptionYear>
 
   <properties>
-    <scala.version>2.7.5</scala.version>
-    <scala-plugin.version>2.10</scala-plugin.version>
+    <scala.version>2.7.6</scala.version>
+    <scala-plugin.version>2.10.1</scala-plugin.version>
   </properties>
 
   <repositories>
