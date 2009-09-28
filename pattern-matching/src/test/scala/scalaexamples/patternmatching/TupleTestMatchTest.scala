@@ -6,7 +6,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(classOf[JUnit4])
-class TupleTestMatchTest {
+class TupleTestMatchTest extends EmptyTest {
   
   @Test def matchOnTupes {
     val simpleTuple: Any = (1, "string")

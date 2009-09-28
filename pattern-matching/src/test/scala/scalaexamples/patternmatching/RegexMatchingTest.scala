@@ -6,7 +6,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(classOf[JUnit4])
-class RegexMatchingTest {
+class RegexMatchingTest extends EmptyTest {
   
   @Test def matchEntireString {
     val string = "This is the string to find a match for."

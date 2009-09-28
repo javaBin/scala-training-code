@@ -8,7 +8,7 @@ import org.junit.runners.JUnit4
 import Math.Pi
 
 @RunWith(classOf[JUnit4])
-class ShapeTest {
+class ShapeTest extends EmptyTest {
 
   val rectangle = new Rectangle(10.0, 4.0)
   val circle = new Circle(3.0)

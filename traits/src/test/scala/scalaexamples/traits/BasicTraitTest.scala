@@ -8,7 +8,7 @@ import org.junit.runners.JUnit4
 import util.Sorting
 
 @RunWith(classOf[JUnit4])
-class BasicTraitTest {
+class BasicTraitTest extends EmptyTest {
   
   val list = List(new Element(10), new Element(2))
   

@@ -6,7 +6,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(classOf[JUnit4])
-class DynamicMixinTest {
+class DynamicMixinTest extends EmptyTest {
   
   @Test def mixInTraitTest {
     val myElement = new Element(0) with MethodTrait

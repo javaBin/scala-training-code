@@ -6,7 +6,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(classOf[JUnit4])
-class PersonTransformerTest {
+class PersonTransformerTest extends EmptyTest {
 
   val personTransformer = new PersonTransformer
 

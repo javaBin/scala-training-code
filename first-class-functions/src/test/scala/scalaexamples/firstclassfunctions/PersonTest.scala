@@ -6,7 +6,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(classOf[JUnit4])
-class PersonTest {
+class PersonTest extends EmptyTest {
 
   val alf = Person("Alf", 30, List(EmailAddress("aks@knowit.no")))
   val fredrik = Person("Fredrik", 33, List(EmailAddress("fredrik@vraalsen.no"), EmailAddress("fvr@knowit.no")))

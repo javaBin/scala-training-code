@@ -6,7 +6,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(classOf[JUnit4])
-class ListTest {
+class ListTest extends EmptyTest {
 
   @Test def testListEquality {
     val list1 = List(1, 2, 3)
