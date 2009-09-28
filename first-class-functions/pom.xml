@@ -26,4 +26,11 @@
   <packaging>jar</packaging>
   <name>Scala Examples - First class functions</name>
   <inceptionYear>2009</inceptionYear>
+  <dependencies>
+  	<dependency>
+  		<groupId>no.knowit.scala-examples</groupId>
+  		<artifactId>common</artifactId>
+  		<version>${project.version}</version>
+  	</dependency>
+  </dependencies>
 </project>

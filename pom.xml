@@ -50,7 +50,6 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <scope>test</scope>
 	  <version>4.6</version>
     </dependency>
  	<dependency>
@@ -142,6 +141,7 @@
   </build>
 
   <modules>
+	<module>common</module>
 	<module>intro</module>
     <module>first-class-functions</module>
     <module>higher-order-functions</module>

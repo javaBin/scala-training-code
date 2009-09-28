@@ -21,16 +21,9 @@
     <version>0.1-SNAPSHOT</version>
   </parent>
   <groupId>no.knowit.scala-examples</groupId>
-  <artifactId>intro</artifactId>
+  <artifactId>common</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <name>Scala Examples - Introduction topics</name>
+  <name>Scala Examples - General functionality</name>
   <inceptionYear>2009</inceptionYear>
-  <dependencies>
-  	<dependency>
-  		<groupId>no.knowit.scala-examples</groupId>
-  		<artifactId>common</artifactId>
-  		<version>${project.version}</version>
-  	</dependency>
-  </dependencies>
 </project>
