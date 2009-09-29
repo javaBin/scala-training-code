@@ -19,7 +19,7 @@
   <artifactId>scala-examples</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Scala examples</name>
+  <name>Scala examples - Testing your Scala skills</name>
   <inceptionYear>2009</inceptionYear>
 
   <properties>
