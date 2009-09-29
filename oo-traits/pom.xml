@@ -21,10 +21,10 @@
     <version>0.1-SNAPSHOT</version>
   </parent>
   <groupId>no.knowit.scala-examples</groupId>
-  <artifactId>traits</artifactId>
+  <artifactId>oo-traits</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <name>Scala Examples - Traits</name>
+  <name>Scala Examples - OO og Traits</name>
   <inceptionYear>2009</inceptionYear>
   <dependencies>
   	<dependency>

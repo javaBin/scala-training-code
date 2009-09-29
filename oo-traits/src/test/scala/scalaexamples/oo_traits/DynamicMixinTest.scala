@@ -1,4 +1,4 @@
-package scalaexamples.traits
+package scalaexamples.oo_traits
 
 import junit.framework.Assert._
 import org.junit.Test
