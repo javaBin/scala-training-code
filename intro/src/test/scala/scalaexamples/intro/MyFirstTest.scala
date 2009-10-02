@@ -1,4 +1,4 @@
-package scalaexamples
+package scalaexamples.intro
 
 import junit.framework.Assert._
 import org.junit.Test
