@@ -2,6 +2,9 @@ package scalaexamples.higherorderfunctions
 
 class PersonPartitioner {
 
+  // Return two lists of persons. The first list should contain the elements
+  // of the original list that satisfy the filter function (f == true) while
+  // the second list should contain the elements where f == false
   def partition(persons: List[Person], f: Person => Boolean): (List[Person], List[Person]) =
     persons match {
       case p :: rest =>
