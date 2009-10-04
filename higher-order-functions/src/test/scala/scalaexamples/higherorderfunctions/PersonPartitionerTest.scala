@@ -5,21 +5,39 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
+// Comment in the tests below and make them run and pass
+
 @RunWith(classOf[JUnit4])
 class PersonPertitionerTest extends EmptyTest {
 
   val partitioner = new PersonPartitioner
 
-  val alf = Person("Alf Kristian", 30)
-  val fredrik = Person("Fredrik", 33)
-  val johannes = Person("Johannes", 0)
+  val alf = Person("Alf", 30, List(EmailAddress("aks@knowit.no")))
+  val fredrik = Person("Fredrik", 33, List(EmailAddress("fredrik@vraalsen.no"), EmailAddress("fvr@knowit.no")))
+  val johannes = Person("Johannes", 0, Nil)
+
   val persons = alf :: fredrik :: johannes :: Nil
 
   @Test
   def testAgeLimit {
-    val (adults, kids) = partitioner.partition(persons, (p: Person) => p.age >= 18)
+    // Pass in a function that tests whether the person is an adult
+    val (adults, kids) = partitioner.partitionPersons(persons, (p: Person) => p.age >= 18)
+
     assertEquals(List(alf, fredrik), adults)
     assertEquals(List(johannes), kids)
+  }
+
+  @Test
+  def testHasMoreThanOneEmail {
+    // Pass in a function that tests whether the person is
+    // a techie (2 or more e-mail addresses) or a luddite (zero or one e-mail address)
+    val (techies, luddites) = partitioner.partitionPersons(persons, (p: Person) => p.emailAddresses match {
+      case List(_, _, _*) => true
+      case _ => false
+    })
+
+    assertEquals(List(fredrik), techies)
+    assertEquals(List(alf, johannes), luddites)
   }
 
 }

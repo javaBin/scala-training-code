@@ -5,29 +5,35 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
+// Comment in the tests below and make them run and pass
+
 @RunWith(classOf[JUnit4])
 class PersonTransformerTest extends EmptyTest {
 
   val personTransformer = new PersonTransformer
 
-  val alf = Person("Alf Kristian", 30)
-  val fredrik = Person("Fredrik", 33)
-  val johannes = Person("Johannes", 0)
+  val alf = Person("Alf", 30, List(EmailAddress("aks@knowit.no")))
+  val fredrik = Person("Fredrik", 33, List(EmailAddress("fredrik@vraalsen.no"), EmailAddress("fvr@knowit.no")))
+  val johannes = Person("Johannes", 0, Nil)
+
   val persons = alf :: fredrik :: Nil
 
   @Test 
   def testEquals {
+    // Pass in a function that returns the list of persons unchanged
     assertEquals(persons, personTransformer.transformPersons(persons, (p: Person) => p))
   }
 
   @Test
-  def testFirstName {
+  def testName {
+    // Pass in a function transforming the list to the names of the persons
     val expected = persons.map(_.name)
     assertEquals(expected, personTransformer.transformPersons(persons, (p: Person) => p.name))
   }
   
   @Test
   def testAge {
+    // Pass in a function transforming the list to the ages of the persons
     val expected = persons.map(_.age)
     assertEquals(expected, personTransformer.transformPersons(persons, (p: Person) => p.age))
   }
