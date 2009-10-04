@@ -12,11 +12,12 @@ class TypeMatchingTest extends EmptyTest {
 	val elements = List(23, "Hello", 8.5, 'q') 
 	for (element <- elements) { 
 	  element match { 
-	    // Comment out every other line than other
+	    // Make test run, and assert on types, e.g. " => assertEquals(23, integer)" or " => assertEquals("Hello", s)"
 	    case i: Int => assertEquals(23, i)
 	    case s: String => assertEquals("Hello", s)
 	    case f: Double => assertEquals(8.5, f)
-	    case other => assertEquals('q', other)
+        case q : Char => assertEquals(q, 'q')
+	    case other => error("Should match other on type")
 	 }
 	}
   }
