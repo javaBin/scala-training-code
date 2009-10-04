@@ -1,9 +1,9 @@
 package scalaexamples.traits
 
 // Make this class Ordered!
-class Element(val anIntValue: Int) extends Ordered[Element] {
+class Element(val anIntValue: Int) {
   
-  def compare(other: Element) = this.anIntValue - other.anIntValue
+  // def compare(other: Element) = 
   
   override def toString = "anIntValue is " + anIntValue
   
