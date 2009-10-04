@@ -16,6 +16,8 @@ class CreateStuffTest extends EmptyTest {
   
   @Test def accessVal {
   	assertEquals("This is a constant", stuff.const)
+   
+    // When commenting in the following line, you must get a compile error
   	// stuff.const = "Must give compile error"
   }
   
