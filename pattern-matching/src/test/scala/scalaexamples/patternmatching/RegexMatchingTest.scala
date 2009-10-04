@@ -8,7 +8,8 @@ import org.junit.runners.JUnit4
 @RunWith(classOf[JUnit4])
 class RegexMatchingTest extends EmptyTest {
   
-  @Test def matchEntireString {
+  // @Test 
+  def matchEntireString {
     val string = "This is the string to find a match for."
     
     // "(string)".r make a Scala regular exception, which may be used in mathing.
@@ -17,32 +18,31 @@ class RegexMatchingTest extends EmptyTest {
     val matchRegex = "(.+)".r
     
     val mathedElement = string match {
-      case matchRegex(firstElement) => firstElement
-      //case s => s
       case _ => "Failed"
     }
     
     assertEquals(string, mathedElement)
   }
   
-  @Test def matchFirstPartOfString {
+  // @Test 
+  def matchFirstPartOfString {
     val start = "This is"
     val string = start + " the string to find a match for."
-    val matchRegex = """^(\w+\s\w+).*""".r
+    val matchRegex = """""".r
     
     val mathedElement = string match {
-      case matchRegex(firstElement) => firstElement
       case _ => "Failed"
     }
     
     assertEquals(start, mathedElement)
   }
   
-  @Test def matchFirstAndLastWordOfString {
+  // @Test 
+  def matchFirstAndLastWordOfString {
     val start = "This"
     val end = "for"
     val string = start + " is the string to find a match " + end
-    val matchRegex = """^(\w+).*?(\w+)$""".r
+    val matchRegex = """""".r
     
     val (first, last) = string match {
       case matchRegex(firstElement, lastElement) => (firstElement, lastElement)
@@ -53,14 +53,14 @@ class RegexMatchingTest extends EmptyTest {
     assertEquals(end, last)
   }
   
-  @Test def matchEmails {
+  // @Test 
+  def matchEmails {
     
     // Create a regex which identifies email (may be really simple)
 	// val emailRegex = """([^@]+)@(.+)""".r
-	val emailRegex = """^([a-zA-Z][\w\.-]*[a-zA-Z0-9])@([a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z])$""".r
+	val emailRegex = "".r
     
     def isValidEmail(stringToTest: String) = stringToTest match {
-      case emailRegex(name, domain) => true
       case _ => false
     }
 

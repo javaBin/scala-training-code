@@ -10,26 +10,24 @@ class ListMatchingTest extends EmptyTest  {
 
   val list = List("Scala", "is", "powerful")
   
-  @Test def matchFirstElementOfList {
+  // @Test
+  def matchFirstElementOfList {
     
     // matchedElement must find the first element. It can also skip the rest (if you want to)
     val mathedElement = list match {
-      //case List(firstElement, lastElement) => firstElement
-      case List(firstElement, _ *) => firstElement
       case _ => "failed"
     }
     
     assertEquals(list(0), mathedElement)
   }
   
-  @Test def matchSecondElementOfList {
+  // @Test 
+  def matchSecondElementOfList {
     
     // matchedElement should fint the second element of the list. 
     // You may ignore the first element and any subsequent elements if you want
     val mathedElement = list match {
       //case List(firstElement, middle, lastElement) => middle
-      //case List(_, middle, _) => middle
-      case List(_, middle, _ *) => middle
       case _ => "failed"
     }
 
@@ -37,7 +35,8 @@ class ListMatchingTest extends EmptyTest  {
   }
 
   
-  @Test def matchNestedLists {
+  // @Test 
+  def matchNestedLists {
 	val nestedList = list :: List("Indeed", "it", "is")
 	// Same as list("Scala", "is", "powerful", List("Indeed", "it", "is")). 
  
@@ -46,20 +45,19 @@ class ListMatchingTest extends EmptyTest  {
                                                                    
 	// You must fint the sublist to make the test pass.
     val mathedElement = nestedList match {
-      case List(_, _, _, sublist) => sublist
       case _ => "failed"
     }
 
     assertEquals(nestedList(3), mathedElement)
   }
   
-  @Test def matchNestedElementOfList {
+  // @Test 
+  def matchNestedElementOfList {
     val subList = List("Indeed", "it", "is")
 	val list = List("Scala", "is", "powerful", subList)
  
 	// Here you must find the first element of the second sublist
     val mathedElement = list match {
-      case List(_, _, _, List(matched, _ *)) => matched
       case _ => "failed"
     }
     assertEquals(subList(0), mathedElement)
