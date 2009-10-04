@@ -18,35 +18,35 @@ class PersonFilterTest extends EmptyTest {
 
   val persons = alf :: fredrik :: johannes :: Nil
   
-  @Test 
+  // @Test 
   def testAll {
     // Pass in a function that returns all persons (always true)
-    assertEquals(persons, personFilter.filterPersons(persons, (p: Person) => true))
+    // assertEquals(persons, personFilter.filterPersons(persons, error("")))
   }
   
-  @Test 
+  // @Test 
   def testNone {
     // Pass in a function that returns no persons (always false)
-    assertEquals(Nil, personFilter.filterPersons(persons, (p: Person) => false))
+    // assertEquals(Nil, personFilter.filterPersons(persons, error("")))
   }
   
-  @Test 
+  // @Test 
   def testEmptyList {
     // Use the two functions from above to test personFilter on empty lists (Nil)
-    assertEquals(Nil, personFilter.filterPersons(Nil, (p: Person) => false))
-    assertEquals(Nil, personFilter.filterPersons(Nil, (p: Person) => true))
+    // assertEquals(Nil, personFilter.filterPersons(Nil, error("")))
+    // assertEquals(Nil, personFilter.filterPersons(Nil, error("")))
   }
 
-  @Test 
+  // @Test 
   def testOld {
     // Pass in a function that returns the persons over 18
-    assertEquals(List(alf, fredrik), personFilter.filterPersons(persons, _.age >= 18))
+    // assertEquals(List(alf, fredrik), personFilter.filterPersons(persons, error("")))
   }
 
-  @Test
+  // @Test
   def testYoung {
     // Pass in a function that returns the persons under 18
-    assertEquals(List(johannes), personFilter.filterPersons(persons, _.age < 18))
+    // assertEquals(List(johannes), personFilter.filterPersons(persons, error("")))
   }
 
 }
