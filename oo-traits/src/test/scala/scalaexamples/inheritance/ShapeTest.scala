@@ -1,4 +1,4 @@
-package scalaexamples.objectorientation
+package scalaexamples.inheritance
 
 import junit.framework.Assert._
 import org.junit.Test

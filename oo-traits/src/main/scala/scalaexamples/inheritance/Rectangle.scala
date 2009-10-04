@@ -1,4 +1,4 @@
-package scalaexamples.objectorientation
+package scalaexamples.inheritance
 
 class Rectangle(width: Double, height: Double, color: String) extends Shape(color) {
 

@@ -1,4 +1,4 @@
-package scalaexamples.objectorientation
+package scalaexamples.inheritance
 
 import Math.Pi
 

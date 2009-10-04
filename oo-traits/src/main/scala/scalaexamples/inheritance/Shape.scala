@@ -1,4 +1,4 @@
-package scalaexamples.objectorientation
+package scalaexamples.inheritance
 
 abstract class Shape(val color: String) {
   
