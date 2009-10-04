@@ -1,5 +1,6 @@
 package scalaexamples.traits
 
+// Make this class Ordered!
 class Element(val anIntValue: Int) extends Ordered[Element] {
   
   def compare(other: Element) = this.anIntValue - other.anIntValue

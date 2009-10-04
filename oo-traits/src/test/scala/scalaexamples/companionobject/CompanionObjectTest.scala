@@ -9,7 +9,7 @@ import org.junit.runners.JUnit4
 class CompanionObjectTest {
 
   @Test def companionObjectTest {
-    // Make the following compile
+    // Comment in epression for expression and make them compile and run
     val trainOne = Train("Per", "Pål")
     assertEquals(List("Per", "Pål"), trainOne.passengers)
     assertTrue(trainOne.conductor.isEmpty)
@@ -26,10 +26,6 @@ class CompanionObjectTest {
     val trainFour = trainObject.apply(Some("conductor"), "Espen")
     assertEquals(List("Espen"), trainTwo.passengers)
     assertTrue(trainFour.conductor.isDefined)
-  }
-  
-  @Test def constructorTest {
-    
   }
   
 }
