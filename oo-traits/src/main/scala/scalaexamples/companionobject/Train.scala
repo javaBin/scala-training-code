@@ -1,4 +1,4 @@
-package scalaexamples.oo_traits
+package scalaexamples.companionobject
 
 
 class Train(val passengers: List[String], val conductor: Option[String]) {

@@ -1,4 +1,4 @@
-package scalaexamples.oo_traits
+package scalaexamples.companionobject
 
 import junit.framework.Assert._
 import org.junit.Test
