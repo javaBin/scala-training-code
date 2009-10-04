@@ -2,13 +2,15 @@ package scalaexamples.higherorderfunctions
 
 class PersonPartitioner {
 
-  // Return two lists of persons. The first list should contain the elements
-  // of the original list that satisfy the filter function (f == true) while
-  // the second list should contain the elements where f == false
-  def partition(persons: List[Person], f: Person => Boolean): (List[Person], List[Person]) =
+  // Implement the method partitionPersons that takes in
+  // a list of persons and a function from Person to Boolean,
+  // applies the function to each Person and
+  // returns two new lists, one with the persons for which the function returns true
+  // and one with the persons for which the function returns false
+  def partitionPersons(persons: List[Person], f: Person => Boolean): (List[Person], List[Person]) =
     persons match {
       case p :: rest =>
-        val (ftrue, ffalse) = partition(rest, f)
+        val (ftrue, ffalse) = partitionPersons(rest, f)
         if (f(p)) (p :: ftrue, ffalse) else (ftrue, p::ffalse)
       case Nil => (Nil, Nil)
     }
