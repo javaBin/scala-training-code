@@ -145,7 +145,6 @@
 	<module>intro</module>
     <module>first-class-functions</module>
     <module>higher-order-functions</module>
-	<module>object-orientation</module>
 	<module>oo-traits</module>
 	<module>pattern-matching</module>
   </modules>

@@ -8,34 +8,35 @@ import org.junit.runners.JUnit4
 @RunWith(classOf[JUnit4])
 class TupleTestMatchTest extends EmptyTest {
   
-  @Test def matchOnTupes {
+  // @Test
+  def matchOnTupes {
     val simpleTuple: Any = (1, "string")
 
     simpleTuple match {
-      // Comment out next line
-      case (one, two) => assertEquals(simpleTuple, (one, two))
+      // Match on the tuple, and assert that its the same => assertEquals(simpleTuple, (one, two))
       case _ => error("Couldnt match it")
     }
   }
   
-  @Test def matchOnTupesWithGuard {
+  // @Test
+  def matchOnTupesWithGuard {
     val simpleTuple: Any = (1, "string")
 
     simpleTuple match {
-      // Comment out next line
-      case (one, _) if one == 1 => assertEquals(1, one)
       case (one, _) => assertEquals(2, one)
+      // Comment in this line and make this run, (hint create guard on the previous match)
+      // case (one, _) => assertEquals(1, one)
       case _ => error("Couldnt match it")
     }
   }
 
-  @Test def matchOnLargerTuple{
+  // @Test
+  def matchOnLargerTuple{
     val simpleTuple: Any = (1, "string", false)
     
     simpleTuple match {
-      // Comment out next line
-      case (one, two, three: Boolean) => assertFalse(three)
-      case (one, two) => error("this is not a Tuple2")
+      // Match on the tuple, and assert with assertFalse(three)
+      case (one, two, three: String) => error("this is not a Tuple3 with last element Boolean")
       case _ => error("Couldnt match it")
     }
   }

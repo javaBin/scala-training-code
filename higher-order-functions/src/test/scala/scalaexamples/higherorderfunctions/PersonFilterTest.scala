@@ -5,43 +5,48 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
+// Comment in the tests below and make them run and pass
+
 @RunWith(classOf[JUnit4])
 class PersonFilterTest extends EmptyTest {
   
   val personFilter = new PersonFilter
   
-  val alf = Person("Alf Kristian", 30)
-  val fredrik = Person("Fredrik", 33)
-  val johannes = Person("Johannes", 0)
+  val alf = Person("Alf", 30, List(EmailAddress("aks@knowit.no")))
+  val fredrik = Person("Fredrik", 33, List(EmailAddress("fredrik@vraalsen.no"), EmailAddress("fvr@knowit.no")))
+  val johannes = Person("Johannes", 0, Nil)
+
   val persons = alf :: fredrik :: johannes :: Nil
   
-  val all = (p: Person) => true
-  val none = (p: Person) => false
-  
-  @Test 
-  def testEmptyList {
-    assertEquals(Nil, personFilter.filterPersons(Nil, none))
-    assertEquals(Nil, personFilter.filterPersons(Nil, all))
-  }
-
-  @Test 
+  // @Test 
   def testAll {
-    assertEquals(persons, personFilter.filterPersons(persons, all))
+    // Pass in a function that returns all persons (always true)
+    // assertEquals(persons, personFilter.filterPersons(persons, error("")))
   }
   
-  @Test 
+  // @Test 
   def testNone {
-    assertEquals(Nil, personFilter.filterPersons(persons, none))
+    // Pass in a function that returns no persons (always false)
+    // assertEquals(Nil, personFilter.filterPersons(persons, error("")))
   }
   
-  @Test 
-  def testOld {
-    assertEquals(alf :: fredrik :: Nil, personFilter.filterPersons(persons, _.age > 18))
+  // @Test 
+  def testEmptyList {
+    // Use the two functions from above to test personFilter on empty lists (Nil)
+    // assertEquals(Nil, personFilter.filterPersons(Nil, error("")))
+    // assertEquals(Nil, personFilter.filterPersons(Nil, error("")))
   }
 
-  @Test 
+  // @Test 
+  def testOld {
+    // Pass in a function that returns the persons over 18
+    // assertEquals(List(alf, fredrik), personFilter.filterPersons(persons, error("")))
+  }
+
+  // @Test
   def testYoung {
-    assertEquals(johannes :: Nil, personFilter.filterPersons(persons, _.age <= 18))
+    // Pass in a function that returns the persons under 18
+    // assertEquals(List(johannes), personFilter.filterPersons(persons, error("")))
   }
 
 }
