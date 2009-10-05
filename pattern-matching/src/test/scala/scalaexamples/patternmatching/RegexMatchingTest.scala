@@ -10,6 +10,10 @@ class RegexMatchingTest extends EmptyTest {
   
   @Test def matchEntireString {
     val string = "This is the string to find a match for."
+    
+    // "(string)".r make a Scala regular exception, which may be used in mathing.
+    // the syntax to use it is case myregex(one). You must use () capturing parentheses
+    // which is used in the match.
     val matchRegex = "(.+)".r
     
     val mathedElement = string match {
@@ -21,11 +25,9 @@ class RegexMatchingTest extends EmptyTest {
     assertEquals(string, mathedElement)
   }
   
-  
   @Test def matchFirstPartOfString {
     val start = "This is"
     val string = start + " the string to find a match for."
-    // val matchRegex = """(.{7}).*""".r
     val matchRegex = """^(\w+\s\w+).*""".r
     
     val mathedElement = string match {
@@ -49,6 +51,23 @@ class RegexMatchingTest extends EmptyTest {
     
     assertEquals(start, first)
     assertEquals(end, last)
+  }
+  
+  @Test def matchEmails {
+    
+    // Create a regex which identifies email (may be really simple)
+	// val emailRegex = """([^@]+)@(.+)""".r
+	val emailRegex = """^([a-zA-Z][\w\.-]*[a-zA-Z0-9])@([a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z])$""".r
+    
+    def isValidEmail(stringToTest: String) = stringToTest match {
+      case emailRegex(name, domain) => true
+      case _ => false
+    }
+
+    assertTrue(isValidEmail("aks@knowit.no"))
+    assertTrue(isValidEmail("alf.kristian@gmail.com"))
+    assertFalse(isValidEmail("fvr_at_knowit.no"))
+    
   }
 
 }

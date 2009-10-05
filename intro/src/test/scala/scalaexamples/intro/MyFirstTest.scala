@@ -7,5 +7,7 @@ import org.junit.runners.JUnit4
 
 @RunWith(classOf[JUnit4])
 class MyFirstTest extends EmptyTest{
+  
+  // Define a test. Make it fail, and then make it pass
 
 }

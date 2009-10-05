@@ -1,4 +1,4 @@
-package scalaexamples.oo_traits
+package scalaexamples.traits
 
 import junit.framework.Assert._
 import org.junit.Test
@@ -22,16 +22,4 @@ class BasicTraitTest extends EmptyTest {
 	  assertFalse(list(0) <= list(1))
   }
   
-  
-  @Test def testOrderedSorting {
-    val intArray = Array(2, 10, 1)
-
-    // Check out util.Sorting
-    Sorting.quickSort(intArray)
-    assertEquals(List(1, 2, 10), intArray.toList)
-    
-    val elementArray = list.toArray
-    Sorting.quickSort(elementArray)
-    assertEquals(list.reverse, elementArray.toList)
-  }
 }

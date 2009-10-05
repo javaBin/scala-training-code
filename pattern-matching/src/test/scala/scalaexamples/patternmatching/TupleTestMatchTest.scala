@@ -12,7 +12,7 @@ class TupleTestMatchTest extends EmptyTest {
     val simpleTuple: Any = (1, "string")
 
     simpleTuple match {
-      // Comment out next line
+      // Match on the tuple, and assert that its the same => assertEquals(simpleTuple, (one, two))
       case (one, two) => assertEquals(simpleTuple, (one, two))
       case _ => error("Couldnt match it")
     }
@@ -22,9 +22,9 @@ class TupleTestMatchTest extends EmptyTest {
     val simpleTuple: Any = (1, "string")
 
     simpleTuple match {
-      // Comment out next line
-      case (one, _) if one == 1 => assertEquals(1, one)
-      case (one, _) => assertEquals(2, one)
+      case (one, _) if one != 1 => assertEquals(2, one)
+      // Comment in this line and make this run, (hint create guard on the previous match)
+      case (one, _) => assertEquals(1, one)
       case _ => error("Couldnt match it")
     }
   }
@@ -33,9 +33,9 @@ class TupleTestMatchTest extends EmptyTest {
     val simpleTuple: Any = (1, "string", false)
     
     simpleTuple match {
-      // Comment out next line
+      // Match on the tuple, and assert with assertFalse(three)
       case (one, two, three: Boolean) => assertFalse(three)
-      case (one, two) => error("this is not a Tuple2")
+      case (one, two, three: String) => error("this is not a Tuple2")
       case _ => error("Couldnt match it")
     }
   }
