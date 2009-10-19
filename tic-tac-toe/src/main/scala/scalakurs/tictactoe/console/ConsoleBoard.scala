@@ -4,6 +4,10 @@ class ConsoleBoard(rows: Int, cols: Int) extends Board(rows, cols) {
   
   def this() = this(3,3)
   
+  def showBoardState {
+    println(toString)
+  }
+  
   override def toString = {
     val res = new StringBuilder
     for (y <- 0 to rows - 1) {

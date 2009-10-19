@@ -10,5 +10,7 @@ abstract class Board(val rows: Int, val cols: Int) {
   }
   
   def apply(x: Int, y: Int) = boardState(x,y)
+  
+  def showBoardState(): Unit
 
 }
