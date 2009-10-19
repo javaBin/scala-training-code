@@ -147,6 +147,7 @@
     <module>higher-order-functions</module>
 	<module>oo-traits</module>
 	<module>pattern-matching</module>
+	<module>tic-tac-toe</module>
   </modules>
 
   <reporting>
