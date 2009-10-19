@@ -27,7 +27,7 @@ class ShapeTest extends EmptyTest {
   def testCircumference {
     assertEquals(28.0, rectangle.circumference)
     assertEquals(2 * Pi * 3.0, circle.circumference)
-    assertEquals(8, square.circumference)
+    assertEquals(8.0, square.circumference)
   }
   
   @Test
