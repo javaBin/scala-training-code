@@ -2,6 +2,7 @@ package scalaexamples.tictactoe.console
 
 class ConsolePlayer extends Player {
 	val character = O
+	val playerName = "You"
 	
 	def move(board: Board) = {
 	  println("""What is your next move?

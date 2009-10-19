@@ -9,4 +9,6 @@ class Matrix[T](rows: Int, cols: Int, defaultValue: T) {
     contents(getPos(x,y)) = value
   }
   private def getPos(x: Int, y: Int) = x + y * cols
+  
+  def emptySlots = contents.find(_ == defaultValue).isDefined
 }

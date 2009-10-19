@@ -7,5 +7,6 @@ trait GameIO {
   def createBoard(rows: Int, cols: Int): Board
   def createComputerPlayer: Player
   def createHumanPlayer: Player
+  def alertNextPlayer(player: Player)
   
 }

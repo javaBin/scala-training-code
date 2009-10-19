@@ -5,7 +5,7 @@ abstract class Board(val rows: Int, val cols: Int) {
   protected val boardState = new Matrix[CellState](rows, cols, Empty)
   
   def update(x: Int, y: Int, state: CellState) {
-    assert(boardState(x,y) == Empty)
+    assert(boardState(x, y) == Empty)
     boardState(x,y) = state
   }
   
@@ -13,5 +13,5 @@ abstract class Board(val rows: Int, val cols: Int) {
   
   def showBoardState(): Unit
 
-  def movePossible = true
+  def movePossible = boardState.emptySlots
 }

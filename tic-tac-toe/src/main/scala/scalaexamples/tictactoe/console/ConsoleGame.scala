@@ -19,5 +19,8 @@ class ConsoleGame extends GameIO {
   def createComputerPlayer = new RandomComputerPlayer(X)
   def createHumanPlayer = new ConsolePlayer
 
+  def alertNextPlayer(player: Player) {
+    println("Next player up is " + player.playerName)
+  }
   
 }
