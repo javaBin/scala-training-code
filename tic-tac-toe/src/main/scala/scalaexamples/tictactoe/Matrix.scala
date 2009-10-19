@@ -1,4 +1,4 @@
-package scalakurs.tictactoe
+package scalaexamples.tictactoe
 
 class Matrix[T](rows: Int, cols: Int, defaultValue: T) {
   private val contents = new Array[T](rows * cols)

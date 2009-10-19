@@ -1,4 +1,4 @@
-package scalakurs.tictactoe.console
+package scalaexamples.tictactoe.console
 
 class ConsoleGame extends GameIO {
 

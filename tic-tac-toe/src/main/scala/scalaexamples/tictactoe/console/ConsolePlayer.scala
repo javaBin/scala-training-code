@@ -1,4 +1,4 @@
-package scalakurs.tictactoe.console
+package scalaexamples.tictactoe.console
 
 class ConsolePlayer extends Player {
 	val character = O

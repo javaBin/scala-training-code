@@ -1,4 +1,4 @@
-package scalakurs.tictactoe
+package scalaexamples.tictactoe
 
 trait GameIO {
 

@@ -1,4 +1,4 @@
-package scalakurs.tictactoe
+package scalaexamples.tictactoe
 
 sealed abstract class CellState
 

@@ -1,4 +1,4 @@
-package scalakurs.tictactoe
+package scalaexamples.tictactoe
 
 abstract class Board(val rows: Int, val cols: Int) {
 

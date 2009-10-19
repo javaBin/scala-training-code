@@ -1,4 +1,4 @@
-package scalakurs.tictactoe.console
+package scalaexamples.tictactoe.console
 
 class ConsoleBoard(rows: Int, cols: Int) extends Board(rows, cols) {
   
