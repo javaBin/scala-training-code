@@ -16,4 +16,8 @@ class ConsoleGame extends GameIO {
   
   def createBoard(rows: Int, cols: Int) = new ConsoleBoard(rows, cols)
   
+  def createComputerPlayer = new RandomComputerPlayer(X)
+  def createHumanPlayer = new ConsolePlayer
+
+  
 }

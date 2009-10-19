@@ -13,4 +13,5 @@ abstract class Board(val rows: Int, val cols: Int) {
   
   def showBoardState(): Unit
 
+  def movePossible = true
 }

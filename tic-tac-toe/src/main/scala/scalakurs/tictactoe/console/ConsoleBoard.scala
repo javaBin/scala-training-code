@@ -17,7 +17,7 @@ class ConsoleBoard(rows: Int, cols: Int) extends Board(rows, cols) {
       for (x <- 0 to cols - 1) {
         if (x > 0) res.append("|")
         val cell = boardState(x, y)
-        res.append(' ').append(cell.toString).append(' ')
+        res.append(' ').append(cell).append(' ')
       }
       res.append('\n')
     }
