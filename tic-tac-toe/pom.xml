@@ -26,4 +26,24 @@
   <packaging>jar</packaging>
   <name>Scala Examples - Tic tac toe game</name>
   <inceptionYear>2009</inceptionYear>
+  
+   <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.1</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>java</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <mainClass>scalaexamples.tictactoe.TicTacToeGame</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
