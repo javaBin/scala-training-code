@@ -3,7 +3,8 @@ package scalaexamples.quiz
 object QuizGame {
   
   def main(args: Array[String]) {
-    println("Its a start")
+    val parsed = xml.XML.loadFile("src/main/resources/quiz.xml")
+    println(parsed)
   }
 
 }

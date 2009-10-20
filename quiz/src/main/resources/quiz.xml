@@ -4,7 +4,7 @@
   <items>
     <item>
       <question>In which continent is the country Japan located?</question>
-      <answer correct="y">Asia</option>
+      <option correct="y">Asia</option>
       <option>Europe</option>
       <option>Africa</option>
       <option>America</option>
