@@ -21,10 +21,10 @@
     <version>0.1-SNAPSHOT</version>
   </parent>
   <groupId>no.knowit.scala-examples</groupId>
-  <artifactId>tic-tac-toe</artifactId>
+  <artifactId>quiz</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
-  <name>Scala Examples - Tic tac toe game</name>
+  <name>Scala Examples - Quiz game</name>
   <inceptionYear>2009</inceptionYear>
   
    <build>
@@ -41,7 +41,7 @@
           </execution>
         </executions>
         <configuration>
-          <mainClass>scalaexamples.tictactoe.TicTacToeGame</mainClass>
+          <mainClass>scalaexamples.quiz.QuizGame</mainClass>
         </configuration>
       </plugin>
     </plugins>
