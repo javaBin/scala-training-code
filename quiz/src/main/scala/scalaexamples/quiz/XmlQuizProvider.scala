@@ -2,10 +2,13 @@ package scalaexamples.quiz
 
 import xml._
 
+/**
+ * This class parses the xml from a file.
+ */
 class XmlQuizProvider(file: String) extends QuizProvider {
 
   def quiz = {
-     val xmlFromFile = xml.XML.loadFile(file)
+     val xmlFromFile = xml.XML.load(getClass.getClassLoader.getResourceAsStream(file))
      parseXml(xmlFromFile)
   } 
   

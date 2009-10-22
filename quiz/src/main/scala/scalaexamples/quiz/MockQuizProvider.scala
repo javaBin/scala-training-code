@@ -1,5 +1,8 @@
 package scalaexamples.quiz
 
+/**
+ * Only use this if you think you have spent too much time solving the XML parsing problem.
+ */
 object MockQuiz extends QuizProvider {
 
   val quiz =
