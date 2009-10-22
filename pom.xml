@@ -59,8 +59,17 @@
       </dependency>
   </dependencies>
 
+
   <dependencyManagement>
+     <dependencies>
+		<dependency>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-swing</artifactId>
+			<version>2.7.6</version>
+		</dependency>
+	</dependencies>
   </dependencyManagement>
+
 
   <build>
     <sourceDirectory>src/main/scala</sourceDirectory>
@@ -147,6 +156,7 @@
     <module>higher-order-functions</module>
 	<module>oo-traits</module>
 	<module>pattern-matching</module>
+	<module>quiz</module>
   </modules>
 
   <reporting>
