@@ -11,7 +11,7 @@ object QuizGame {
     // val quiz = MockQuiz.quiz
     val quiz = new XmlQuizProvider("quiz.xml").quiz 
     new console.ConsoleGame(quiz)
-    new swing.SwingGame(quiz)
+    // new swing.SwingGame(quiz)
   }
 
 }
