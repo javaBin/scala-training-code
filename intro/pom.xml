@@ -20,7 +20,6 @@
     <artifactId>scala-examples</artifactId>
     <version>0.1-SNAPSHOT</version>
   </parent>
-  <groupId>no.scalabin.scala-examples</groupId>
   <artifactId>intro</artifactId>
   <version>0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
