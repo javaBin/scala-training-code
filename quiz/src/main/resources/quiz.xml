@@ -19,9 +19,9 @@
     <item>
       <question>How many points are on a hexagon?</question>
       <option>5</option>
-      <option>6</option>
+      <option correct="y">6</option>
       <option>7</option>
-      <option correct="y">8</option>
+      <option>8</option>
     </item>		
   </items>
 </quiz>
