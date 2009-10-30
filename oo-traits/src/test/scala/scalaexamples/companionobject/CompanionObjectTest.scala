@@ -10,6 +10,8 @@ class CompanionObjectTest {
 
   @Test def companionObjectTest {
     // Comment in epression for expression and make them compile and run
+    // Hint: You do this by changing the Train.scala definition. More hints in the source file.
+    
     // val trainOne = Train("Per", "Pål")
     // assertEquals(List("Per", "Pål"), trainOne.passengers)
     // assertTrue(trainOne.conductor.isEmpty)
