@@ -48,7 +48,7 @@ class ListMatchingTest extends EmptyTest  {
       case _ => "failed"
     }
 
-    assertEquals(nestedList(0), mathedElement)
+    assertEquals(list, mathedElement)
   }
   
   // @Test 
