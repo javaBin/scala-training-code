@@ -11,7 +11,7 @@ class Element(val anIntValue: Int) extends Ordered[Element] {
 
 trait InterfaceTrait {
   
-  def getSomeString
+  def getSomeString: String
   
 }
 
