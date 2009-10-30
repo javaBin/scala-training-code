@@ -83,9 +83,10 @@ class PersonTest extends EmptyTest {
     }
   }
 
-  // @Test
+  @Test
   def testFindEmailAddressesByName {
-    // Find the e-mail addresses of the person named "Alf"
+    // Find the e-mail addresses of the person named "Alf". Here you must first find the person, 
+    // then map the collection to a different type
     val name = "Alf"
     val addresses: Option[List[EmailAddress]] = null
     
@@ -97,7 +98,8 @@ class PersonTest extends EmptyTest {
 
   // @Test
   def testFindPersonByEmail {
-    // Find the person who has the e-mail address "fvr@knowit.no"
+    // Find the person who has the e-mail address "fvr@knowit.no". Hint, try combinining 
+    // finding the person and check if the person has an email that exists according to the adress.
     val address = EmailAddress("fvr@knowit.no")
     val person: Option[Person] = null
     
@@ -110,7 +112,9 @@ class PersonTest extends EmptyTest {
   // @Test
   def testGetFirstEmailAddress {
     // Create a new list of the first e-mail address of each person,
-    // filtering out persons without e-mail addresses
+    // filtering out persons without e-mail addresses. Hint try combining 
+    // filtering the list and then mapping it to a different type, only 
+    // getting the head of the email address list.
     val addresses = Nil
 
     assertEquals(List(alf.emailAddresses.head, fredrik.emailAddresses.head), addresses)
@@ -120,8 +124,10 @@ class PersonTest extends EmptyTest {
   def testNameToEmailAddress {
     // Create a map from each persons name to their e-mail addresses,
     // filtering out persons without e-mail addresses
-    // Hint: Use folding to accumulate...
+    // Hint: First filter list, then use foldLeft to accumulate...
     val emptyMap: Map[String, List[EmailAddress]] = Map()
+    
+    // Insert code here for emptyMap
     val nameToEmail = emptyMap
 
     assertEquals(Map(alf.name -> alf.emailAddresses, fredrik.name -> fredrik.emailAddresses), nameToEmail)
