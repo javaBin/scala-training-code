@@ -83,7 +83,7 @@ class PersonTest extends EmptyTest {
     }
   }
 
-  @Test
+  // @Test
   def testFindEmailAddressesByName {
     // Find the e-mail addresses of the person named "Alf". Here you must first find the person, 
     // then map the collection to a different type
