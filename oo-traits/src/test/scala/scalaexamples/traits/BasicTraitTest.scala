@@ -14,7 +14,7 @@ class BasicTraitTest extends EmptyTest {
   
   @Test def mixInOrderedTraitTest {
       // Make the following compile (and run of course)
-	  // Hint implement the Ordered interface
+	  // Hint implement the Ordered interface on the Element class
 
 	  // assertTrue((list(0) compare list(1)) > 0)
 	  // assertTrue(list(0) > list(1))

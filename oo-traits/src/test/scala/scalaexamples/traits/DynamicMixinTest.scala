@@ -12,7 +12,9 @@ class DynamicMixinTest extends EmptyTest {
   def mixInTraitTest {
     val myElement = new Element(0)
     
-    // Make the following compile and run
+    // Make the following compile and run. 
+    // Hint this is easy to achieve by using mixing in the correct 
+    // trait right here when creating the instance of Element.
     
     // assertEquals("a value", myElement.mixedInMethod)
     val anotherElement = new Element(0) with MethodTrait
@@ -22,16 +24,18 @@ class DynamicMixinTest extends EmptyTest {
   
   // @Test 
   def mixInInterfaceTest {
-    // Make the following compile and run
+    // Make the following compile and run (uncomment the code)
+    // Hint you can open the class or subclass it right here.
     
     // val myElement = new Element(0) with InterfaceTrait
     // assertNotNull(myElement.getSomeString)
   }
   
   
-  // @Test 
+  // @Test
   def stackableTraitTest {
-   // Hint make your own class here, which extends Element and SubClassTrait
+    // Make the following run without assertion error.
+    // Hint: extend ElementWithStackableTrait with Element and SubClassTrait
     class ElementWithStackableTrait(value: Int)
     val element = new ElementWithStackableTrait(1)
     assertEquals("stacked toString, super toString is 'anIntValue is 1'", element.toString)
