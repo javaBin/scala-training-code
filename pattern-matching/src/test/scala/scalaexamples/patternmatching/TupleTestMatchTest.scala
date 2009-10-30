@@ -24,7 +24,7 @@ class TupleTestMatchTest extends EmptyTest {
 
     simpleTuple match {
       case (one, _) => assertEquals(2, one)
-      // Comment in this line and make this run, (hint create guard on the previous match)
+      // Comment in this line and make this run, (hint create guard on the previous match, so that it won't hit)
       // case (one, _) => assertEquals(1, one)
       case _ => error("Couldnt match it")
     }

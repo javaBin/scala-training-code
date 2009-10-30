@@ -27,6 +27,7 @@ class MyCaseClassMatchingTest extends EmptyTest {
        case _ => error("Should never reach this")
      }
 
+     // You should not change the following code at all. Only add matches which will make the tests match.
      var theClass: MyCaseClass = FirstSubClass(10)
      var foundElement = mathSubType(theClass)
      assertEquals(10, foundElement)

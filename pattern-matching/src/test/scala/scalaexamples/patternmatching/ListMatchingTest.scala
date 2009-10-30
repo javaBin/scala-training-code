@@ -15,6 +15,7 @@ class ListMatchingTest extends EmptyTest  {
     
     // matchedElement must find the first element. It can also skip the rest (if you want to)
     val mathedElement = list match {
+      // Insert you match statement(s) here
       case _ => "failed"
     }
     
@@ -24,10 +25,10 @@ class ListMatchingTest extends EmptyTest  {
   // @Test 
   def matchSecondElementOfList {
     
-    // matchedElement should fint the second element of the list. 
+    // matchedElement should find the second element of the list. 
     // You may ignore the first element and any subsequent elements if you want
     val mathedElement = list match {
-      //case List(firstElement, middle, lastElement) => middle
+      // Insert you match statement here
       case _ => "failed"
     }
 
@@ -45,6 +46,7 @@ class ListMatchingTest extends EmptyTest  {
                                        
 	// You must find the sublist to make the test pass.
     val mathedElement = nestedList match {
+      // Insert you match statement here
       case _ => "failed"
     }
 
@@ -58,6 +60,7 @@ class ListMatchingTest extends EmptyTest  {
  
 	// Here you must find the first element of the second sublist
     val mathedElement = list match {
+      // Insert you match statement here
       case _ => "failed"
     }
     assertEquals(subList(0), mathedElement)

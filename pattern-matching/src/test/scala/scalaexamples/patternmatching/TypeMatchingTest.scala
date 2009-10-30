@@ -14,6 +14,7 @@ class TypeMatchingTest extends EmptyTest {
 	for (element <- elements) { 
 	  element match { 
 	    // Make test run, and assert on types, e.g. " => assertEquals(23, integer)" or " => assertEquals("Hello", s)"
+	    // Insert your matching code here
 	    case other => error("Should match other on type")
 	 }
 	}

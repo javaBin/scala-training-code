@@ -18,6 +18,7 @@ class RegexMatchingTest extends EmptyTest {
     val matchRegex = "(.+)".r
     
     val mathedElement = string match {
+      // Insert you match statement here
       case _ => "Failed"
     }
     
@@ -31,6 +32,7 @@ class RegexMatchingTest extends EmptyTest {
     val matchRegex = """""".r
     
     val mathedElement = string match {
+      // Insert you match statement here
       case _ => "Failed"
     }
     
@@ -42,6 +44,8 @@ class RegexMatchingTest extends EmptyTest {
     val start = "This"
     val end = "for"
     val string = start + " is the string to find a match " + end
+    
+    // Create a regular expression which will make the folliwing match and assertions correct.
     val matchRegex = """""".r
     
     val (first, last) = string match {
@@ -58,9 +62,11 @@ class RegexMatchingTest extends EmptyTest {
     
     // Create a regex which identifies email (may be really simple)
 	// val emailRegex = """([^@]+)@(.+)""".r
+    // You may use the regex above.
 	val emailRegex = "".r
     
     def isValidEmail(stringToTest: String) = stringToTest match {
+      // Insert you match statement here
       case _ => false
     }
 
