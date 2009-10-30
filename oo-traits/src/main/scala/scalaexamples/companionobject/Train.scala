@@ -1,6 +1,6 @@
 package scalaexamples.companionobject
 
-// Define a primary constructor which takes a list of passengers (String) and an Option(al) conductor also Sting
+// Define a primary constructor which takes a list of passengers (String) and an Option conductor also String
 class Train(val passengers: List[String], val conductor: Option[String]) {
 
   // You should also define an auxiliary constructor, which ignores the conductor
