@@ -52,10 +52,7 @@ class PersonTest extends EmptyTest {
   def testHasMultipleEmails {
     // Split the list of persons into two new lists containing
     // techies (more than one email address) and luddites (zero or only one email address)
-    val (techies, luddites) = persons partition (_.emailAddresses match {
-      case List(_, _, _*) => true
-      case _ => false
-    })
+    val (techies, luddites) = persons.partition(_.emailAddresses.size > 1)
 
     assertEquals(List(fredrik), techies)
     assertEquals(List(alf, johannes), luddites)
