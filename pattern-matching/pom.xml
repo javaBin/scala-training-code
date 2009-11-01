@@ -27,7 +27,7 @@
   <inceptionYear>2009</inceptionYear>
   <dependencies>
   	<dependency>
-  		<groupId>no.knowit.scala-examples</groupId>
+  		<groupId>no.scalabin.scala-examples</groupId>
   		<artifactId>common</artifactId>
   		<version>${project.version}</version>
   	</dependency>
