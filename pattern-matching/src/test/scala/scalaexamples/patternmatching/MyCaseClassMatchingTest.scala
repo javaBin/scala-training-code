@@ -22,26 +22,26 @@ class MyCaseClassMatchingTest extends EmptyTest {
   // @Test 
   def matchSubType {
      
-     def mathSubType(myType: MyCaseClass) = myType match {
+     def matchSubType(myType: MyCaseClass) = myType match {
        // Add match expressions which make the following code pass.
        case _ => error("Should never reach this")
      }
 
      // You should not change the following code at all. Only add matches which will make the tests match.
      var theClass: MyCaseClass = FirstSubClass(10)
-     var foundElement = mathSubType(theClass)
+     var foundElement = matchSubType(theClass)
      assertEquals(10, foundElement)
      
      theClass = SecondSubClass("verdi")
-     foundElement = mathSubType(theClass)
+     foundElement = matchSubType(theClass)
      assertEquals("verdi", foundElement)
      
      theClass = ThirdSubClass("verdi", List(1, 2))
-     foundElement = mathSubType(theClass)
+     foundElement = matchSubType(theClass)
      assertEquals(List(1, 2), foundElement)
      
      theClass = FourthSubClass("verdi", FirstSubClass(11))
-     foundElement = mathSubType(theClass)
+     foundElement = matchSubType(theClass)
      assertEquals(11, foundElement)
   }
   
