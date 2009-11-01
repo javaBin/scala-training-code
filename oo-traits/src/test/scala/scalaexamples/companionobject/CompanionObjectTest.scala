@@ -12,21 +12,21 @@ class CompanionObjectTest {
     // Comment in epression for expression and make them compile and run
     // Hint: You do this by changing the Train.scala definition. More hints in the source file.
     
-    // val trainOne = Train("Per", "Pål")
-    // assertEquals(List("Per", "Pål"), trainOne.passengers)
+    // val trainOne = Train(Array("Espen"))
+    // assertEquals(List("Espen"), trainOne.passengers)
     // assertTrue(trainOne.conductor.isEmpty)
     
-    // val trainTwo = Train(Array("Espen"))
-    // assertEquals(List("Espen"), trainTwo.passengers)
+    // val trainTwo = Train("Per", "Pål")
+    // assertEquals(List("Per", "Pål"), trainTwo.passengers)
     // assertTrue(trainTwo.conductor.isEmpty)
     
     // val trainObject = Train
     // val trainThree = trainObject(Array("Espen"))
-    // assertEquals(List("Espen"), trainTwo.passengers)
+    // assertEquals(List("Espen"), trainOne.passengers)
     // assertTrue(trainThree.conductor.isEmpty)
 
     // val trainFour = trainObject.apply(Some("conductor"), "Espen")
-    // assertEquals(List("Espen"), trainTwo.passengers)
+    // assertEquals(List("Espen"), trainOne.passengers)
     // assertTrue(trainFour.conductor.isDefined)
   }
   
