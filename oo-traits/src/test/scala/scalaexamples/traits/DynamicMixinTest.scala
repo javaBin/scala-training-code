@@ -13,7 +13,7 @@ class DynamicMixinTest extends EmptyTest {
     val myElement = new Element(0)
     
     // Make the following compile and run. 
-    // Hint this is easy to achieve by using mixing in the correct 
+    // Hint this is easy to achieve by mixing in the correct 
     // trait right here when creating the instance of Element.
     
     // assertEquals("a value", myElement.mixedInMethod)
