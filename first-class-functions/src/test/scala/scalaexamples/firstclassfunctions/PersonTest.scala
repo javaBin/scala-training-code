@@ -10,7 +10,7 @@ import org.junit.runners.JUnit4
 @RunWith(classOf[JUnit4])
 class PersonTest extends EmptyTest {
 
-  val alf = Person("Alf", 30, List(EmailAddress("aks@knowit.no")))
+  val alf = Person("Alf", 30, List(EmailAddress("alf.kristian@gmail.com")))
   val fredrik = Person("Fredrik", 33, List(EmailAddress("fredrik@vraalsen.no"), EmailAddress("fvr@knowit.no")))
   val johannes = Person("Johannes", 0, Nil)
 
@@ -96,8 +96,8 @@ class PersonTest extends EmptyTest {
 
   @Test
   def testFindPersonByEmail {
-    // Find the person who has the e-mail address "fvr@knowit.no"
-    val address = EmailAddress("fvr@knowit.no")
+    // Find the person who has the e-mail address "fredrik@vraalsen.no"
+    val address = EmailAddress("fredrik@vraalsen.no")
     val person = persons find(_.emailAddresses exists (address ==))
     
     person match {
