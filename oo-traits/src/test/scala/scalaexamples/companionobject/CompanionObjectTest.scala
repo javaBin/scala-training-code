@@ -20,11 +20,11 @@ class CompanionObjectTest {
     
     val trainObject = Train
     val trainThree = trainObject(Array("Espen"))
-    assertEquals(List("Espen"), trainTwo.passengers)
+    assertEquals(List("Espen"), trainThree.passengers)
     assertTrue(trainThree.conductor.isEmpty)
 
     val trainFour = trainObject.apply(Some("conductor"), "Espen")
-    assertEquals(List("Espen"), trainTwo.passengers)
+    assertEquals(List("Espen"), trainFour.passengers)
     assertTrue(trainFour.conductor.isDefined)
   }
   
