@@ -14,7 +14,7 @@ import org.junit.runners.JUnit4
 @RunWith(classOf[JUnit4])
 class PersonTest extends EmptyTest {
 
-  val alf = Person("Alf", 30, List(EmailAddress("aks@knowit.no")))
+  val alf = Person("Alf", 30, List(EmailAddress("alf.kristian@gmail.com")))
   val fredrik = Person("Fredrik", 33, List(EmailAddress("fredrik@vraalsen.no"), EmailAddress("fvr@knowit.no")))
   val johannes = Person("Johannes", 0, Nil)
 
@@ -110,7 +110,7 @@ class PersonTest extends EmptyTest {
     // Hint: Try combinining finding the person and checking if
     // there exists an email address matching the criteria in the
     // person's list of email addresses.
-    val address = EmailAddress("fvr@knowit.no")
+    val address = EmailAddress("fredrik@vraalsen.no")
     val person: Option[Person] = null
     
     person match {

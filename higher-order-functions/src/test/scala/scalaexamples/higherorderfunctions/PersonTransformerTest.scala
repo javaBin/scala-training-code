@@ -12,7 +12,7 @@ class PersonTransformerTest extends EmptyTest {
 
   val personTransformer = new PersonTransformer
 
-  val alf = Person("Alf", 30, List(EmailAddress("aks@knowit.no")))
+  val alf = Person("Alf", 30, List(EmailAddress("alf.kristian@gmail.com")))
   val fredrik = Person("Fredrik", 33, List(EmailAddress("fredrik@vraalsen.no"), EmailAddress("fvr@knowit.no")))
   val johannes = Person("Johannes", 0, Nil)
 
