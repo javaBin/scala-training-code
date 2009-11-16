@@ -54,6 +54,7 @@ class SwingGame(quiz: Quiz) extends MainFrame {
     		if(b.peer.isSelected && b.answer.correct)
     	} yield 0
        }.size
+       panels.flatMap(_.allButtons).foreach(_.enabled = false)
        resultLabel.text = "You got " + correctAnswers + " answers correct out of " + qsize
        repaint
     }
