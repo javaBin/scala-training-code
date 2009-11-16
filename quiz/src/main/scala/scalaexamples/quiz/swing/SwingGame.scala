@@ -32,6 +32,7 @@ class SwingGame(quiz: Quiz) extends MainFrame {
   }
 
   val nextButton = new Button("Next") {
+    enabled = false
 	  reactions += {
 	    case e: ButtonClicked =>  {
 	      currentQuestion += 1
