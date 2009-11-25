@@ -16,7 +16,7 @@ class PersonTransformerTest extends EmptyTest {
   val fredrik = Person("Fredrik", 33, List(EmailAddress("fredrik@vraalsen.no"), EmailAddress("fvr@knowit.no")))
   val johannes = Person("Johannes", 0, Nil)
 
-  val persons = alf :: fredrik :: Nil
+  val persons = alf :: fredrik :: johannes:: Nil
 
   @Test 
   def testEquals {
