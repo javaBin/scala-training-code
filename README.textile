@@ -2,7 +2,7 @@ h2. Scala training - code
 
 This github project is the code used for the Scala training course. It is recommended to solve them supervised during a training session.
 
-The slides, which go along with the code is kept at "Scala training slides":http://github.com/javaBin/scala-training-slides. You should check out the readme in to understand a little bit more of the background for the training class and how we performed it.
+The slides, which go along with the code is kept at "Scala training slides":http://github.com/javaBin/scala-training-slides. You should check out the readme in the slide project to understand a little bit more of the background for the training class and how we performed it.
 
 h3. Topics
 
@@ -24,4 +24,6 @@ h3. License
 
 The training course is licensed under "Creative Commons Attribution 3.0 Unported":http://creativecommons.org/licenses/by/3.0/.
 
-Please use this, and change this however you may please.
+All this means, is that you need to credit Fredrik Vraalsen (fredrik@vraalsen.no) and Alf Kristian Støyle (alf.kristian@gmail.com) of scalaBin for the original work. A part from that you may do whatever you please with the work.
+
+We hope you find this useful.
