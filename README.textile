@@ -18,7 +18,7 @@ h3. Solutions
 
 All the tasks have been solved in a Git branch called 'solutions'. You may also download this code directly from Github with the following link:
 
-"solutions.zip":http://github.com/javaBin/scala-training-code/zipball/solutions       
+"http://github.com/javaBin/scala-training-code/zipball/solutions":http://github.com/javaBin/scala-training-code/zipball/solutions       
 
 h3. License
 
