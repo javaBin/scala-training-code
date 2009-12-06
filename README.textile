@@ -2,15 +2,15 @@ h2. Scala training - code
 
 This github project is the code used for the Scala training course. It is recommended to solve them supervised during a training session.
 
-The slides, which go along with the code is kept at "Scala training slides":http://github.com/javaBin/scala-training-slides. You should check out the readme in the slide project to understand a little bit more of the background for the training class and how we performed it.
+The slides which go along with the code is kept at "Scala training slides":http://github.com/javaBin/scala-training-slides. You should check out the readme in the slide project to understand a little bit more of the background for the training class and how we performed it.
 
 h3. Topics
 
-The code had been divided into the following topics
+The code has been divided into the following topics
 * Intro - a little warm up
-* First class functions - various task for this feature
+* First class functions - various exercises covering use of first class functions
 * Pattern matching - various types of pattern matching
-* oo-traits - exploring some of the topics around object orientation and trait support. Also a few tasks covering for exploring syntax.
+* oo-traits - exploring some of the topics around object orientation and trait support. Also a few exercises exploring syntax.
 
 We believe these tasks are enough for day one of the course. Second day would typically be only the quiz project, which is a larger task. To solve it you must parse some XML, write a console app and a Scala Swing app.
 
@@ -24,6 +24,6 @@ h3. License
 
 The training course is licensed under "Creative Commons Attribution 3.0 Unported":http://creativecommons.org/licenses/by/3.0/.
 
-All this means, is that you need to credit Fredrik Vraalsen (fredrik@vraalsen.no) and Alf Kristian Støyle (alf.kristian@gmail.com) of scalaBin for the original work. A part from that you may do whatever you please with the work.
+All this means, is that you need to credit Fredrik Vraalsen (fredrik@vraalsen.no) and Alf Kristian Støyle (alf.kristian@gmail.com) of scalaBin for the original work. Apart from that you may do whatever you please with the work.
 
 We hope you find this useful.
