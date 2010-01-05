@@ -56,6 +56,14 @@
         <groupId>org.scala-lang</groupId>
         <artifactId>scala-library</artifactId>
         <version>${scala.version}</version>
+    </dependency>
+
+    <!-- Pleasing IntelliJ, so it is not necessary to add scala compiler to module when opening project. -->
+ 	<dependency>
+        <groupId>org.scala-lang</groupId>
+        <artifactId>scala-compiler</artifactId>
+        <version>${scala.version}</version>
+        <scope>provided</scope>
       </dependency>
   </dependencies>
 
