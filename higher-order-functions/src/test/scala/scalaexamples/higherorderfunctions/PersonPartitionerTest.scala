@@ -4,6 +4,7 @@ import junit.framework.Assert._
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import scalaexamples.EmptyTest
 
 // Comment in the tests below and make them run and pass
 
