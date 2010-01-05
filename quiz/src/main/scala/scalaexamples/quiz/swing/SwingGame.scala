@@ -3,6 +3,7 @@ package scalaexamples.quiz.swing
 import scala.swing._
 import event._
 import javax.swing.border.EmptyBorder
+import scalaexamples.quiz.Quiz
 
 class SwingGame(quiz: Quiz) extends MainFrame {
   val qsize = quiz.questions.size

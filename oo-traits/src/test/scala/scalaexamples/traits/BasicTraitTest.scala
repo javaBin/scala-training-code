@@ -6,6 +6,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 import util.Sorting
+import scalaexamples.EmptyTest
 
 @RunWith(classOf[JUnit4])
 class BasicTraitTest extends EmptyTest {

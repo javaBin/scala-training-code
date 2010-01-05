@@ -6,6 +6,7 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 import Math.Pi
+import scalaexamples.EmptyTest
 
 @RunWith(classOf[JUnit4])
 class ShapeTest extends EmptyTest {

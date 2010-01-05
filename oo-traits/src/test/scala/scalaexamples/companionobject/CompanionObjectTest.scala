@@ -4,9 +4,10 @@ import junit.framework.Assert._
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import scalaexamples.EmptyTest
 
 @RunWith(classOf[JUnit4])
-class CompanionObjectTest {
+class CompanionObjectTest extends EmptyTest{
 
   @Test def companionObjectTest {
     // Comment in epression for expression and make them compile and run
