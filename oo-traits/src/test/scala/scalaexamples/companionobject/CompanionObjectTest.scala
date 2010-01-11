@@ -10,7 +10,7 @@ import scalaexamples.EmptyTest
 class CompanionObjectTest extends EmptyTest{
 
   @Test def companionObjectTest {
-    // Comment in epression for expression and make them compile and run
+    // Comment in expression by expression and make them compile and run
     // Hint: You do this by changing the Train.scala definition. More hints in the source file.
     
     // val trainOne = Train(Array("Espen"))
