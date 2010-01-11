@@ -34,7 +34,7 @@ class RegexMatchingTest extends EmptyTest {
   def matchFirstPartOfString {
     val start = "This is"
     val string = start + " the string to find a match for."
-    val matchRegex = """^(\w+).*?(\w+)$""".r
+    val matchRegex = """^(\w+\s\w+).*""".r
     
     val mathedElement = string match {
       // Insert you match statement here
@@ -68,7 +68,7 @@ class RegexMatchingTest extends EmptyTest {
     // Create a regex which identifies email (may be really simple)
 	// val emailRegex = """([^@]+)@(.+)""".r
     // You may use the regex above.
-	val emailRegex = "".r
+	val emailRegex = """""".r
     
     def isValidEmail(stringToTest: String) = stringToTest match {
       // Insert you match statement here
