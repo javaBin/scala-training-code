@@ -10,7 +10,7 @@ import scalaexamples.EmptyTest
 class CompanionObjectTest extends EmptyTest{
 
   @Test def companionObjectTest {
-    // Comment in epression for expression and make them compile and run
+    // Comment in expression by expression and make them compile and run
     val trainOne = Train("Per", "Pål")
     assertEquals(List("Per", "Pål"), trainOne.passengers)
     assertTrue(trainOne.conductor.isEmpty)
