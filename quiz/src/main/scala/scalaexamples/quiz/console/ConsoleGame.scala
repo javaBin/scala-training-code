@@ -24,18 +24,25 @@ class ConsoleGame(quiz: Quiz) {
   println("\nYou got " + correctAnswer + " correct of " + quiz.questions.length + " possible")
   
   private def readAnswer(q: Question) = {
-    var answer: Answer = null
-    while (answer == null) {
+    var answer: Option[Answer] = None
+    while (answer == None) {
       answer = try { 
-        println("Enter you answer:")
+        println("What is your answer:")
         val res = readLine.toInt - 1
-        q.answers(res)
+
+        // Because q.anwers.apply(0) is implemented with drop(n).head it allows negative indices.
+        // Must check for range.
+        if (q.answers.isDefinedAt(res)) Some(q.answers(res))
+        else {
+          println("Incorrect answer, not in range");
+          None
+        }
       }
       catch {
-        case e => println("Incorrect answer"); null 
+        case e => println("Incorrect answer"); None
       }
      }
-    answer
+    answer.get
   }
   
 }
