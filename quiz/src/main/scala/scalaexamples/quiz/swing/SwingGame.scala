@@ -1,6 +1,7 @@
 package scalaexamples.quiz.swing
 
 import scala.swing._
+import event._
 import scalaexamples.quiz.Quiz
 
 
