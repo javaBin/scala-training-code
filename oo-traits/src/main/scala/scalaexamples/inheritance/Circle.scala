@@ -1,6 +1,6 @@
 package scalaexamples.inheritance
 
-import Math.Pi
+import scala.math._
 
 class Circle(radius: Double, color: String) extends Shape(color) {
 
