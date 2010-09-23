@@ -1,6 +1,7 @@
 package scalaexamples.quiz.swing
 
 import scala.swing._
+import scala.swing.Swing._
 import event._
 import javax.swing.border.EmptyBorder
 import scalaexamples.quiz.Quiz
