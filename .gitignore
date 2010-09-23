@@ -13,6 +13,8 @@ TAGS
 .settings
 *.iws
 *.ipr
-*.iml          
+*.iml
 .idea
 *iml
+lib_managed/
+boot/

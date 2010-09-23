@@ -1,6 +1,6 @@
 package scalaexamples.inheritance
 
-import Math.Pi
+import scala.math._
 
 // Make Circle extend Shape, and add a primary constructor for radius and color
 class Circle {
