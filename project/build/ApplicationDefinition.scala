@@ -13,7 +13,7 @@ class ApplicationProject(info: ProjectInfo) extends ParentProject(info) {
     override val testCompilePath = "target" / "test-classes"
   }
                                                                                                
-  lazy val common = project("common", "common", new DefaultProject(_) {val junit = "junit" % "junit" % "4.7"})
+  lazy val common = project("common", "common", new DefaultProject(_) {val junit = "junit" % "junit" % "4.8.1"})
   lazy val intro = project("intro", "intro", new DefaultProject(_) with MavenFriendly, common)
   lazy val first_class_functions = project("first-class-functions", "first-class-functions", new DefaultProject(_) with MavenFriendly, common)
   lazy val higher_order_functions = project("higher-order-functions", "higher-order-functions", new DefaultProject(_) with MavenFriendly, common)
