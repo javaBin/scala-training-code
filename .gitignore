@@ -18,3 +18,4 @@ TAGS
 *iml
 lib_managed/
 boot/
+.scala_dependencies
