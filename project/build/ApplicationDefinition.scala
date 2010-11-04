@@ -18,6 +18,7 @@ class ApplicationProject(info: ProjectInfo) extends ParentProject(info) {
   lazy val first_class_functions = project("first-class-functions", "first-class-functions", new DefaultProject(_) with MavenFriendly, common)
   lazy val higher_order_functions = project("higher-order-functions", "higher-order-functions", new DefaultProject(_) with MavenFriendly, common)
   lazy val oo_traits = project("oo-traits", "oo-traits", new DefaultProject(_) with MavenFriendly, common)
+  lazy val pattern_matching = project("pattern-matching", "pattern-matching", new DefaultProject(_) with MavenFriendly, common)
   lazy val quiz = project("quiz", "quiz", new DefaultProject(_) with MavenFriendly {
 	val scala_swing = "org.scala-lang" % "scala-swing" % "2.8.0"
   }, common)
