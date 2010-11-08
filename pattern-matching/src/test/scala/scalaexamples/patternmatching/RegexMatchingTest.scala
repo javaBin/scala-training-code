@@ -12,7 +12,7 @@ class RegexMatchingTest extends EmptyTest {
   @Test def matchEntireString {
     val string = "This is the string to find a match for."
     
-    // "(string)".r make a Scala regular exception, which may be used in mathing.
+    // "(string)".r make a Scala regular expression, which may be used in mathing.
     // the syntax to use it is case myregex(one). You must use () capturing parentheses
     // which is used in the match.
     val matchRegex = "(.+)".r
