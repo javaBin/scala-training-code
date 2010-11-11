@@ -22,7 +22,7 @@ class XmlQuizProvider(file: String) extends QuizProvider {
   
   private def parseElement(node: NodeSeq) = {
     val text = (node \ "question").text
-    val answers = (node \ "option").map(option => Answer(option.text, option.attribute("correct").map(_ == "y").getOrElse(false)))
+    val answers = (node \ "option").map(option => Answer(option.text, option.attribute("correct").map(_.text == "y").getOrElse(false)))
     Question(text, answers.toList)
   }
 }
