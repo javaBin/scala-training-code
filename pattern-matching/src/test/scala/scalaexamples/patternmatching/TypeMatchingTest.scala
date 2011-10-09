@@ -18,7 +18,7 @@ class TypeMatchingTest extends EmptyTest {
 	    case s: String => assertEquals("Hello", s)
 	    case f: Double => assertEquals(8.5, f)
         case q : Char => assertEquals(q, 'q')
-	    case other => error("Should match other on type")
+	    case other => sys.error("Should match other on type")
 	 }
 	}
   }

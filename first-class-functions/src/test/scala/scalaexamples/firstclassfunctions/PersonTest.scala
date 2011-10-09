@@ -67,7 +67,7 @@ class PersonTest extends EmptyTest {
     
     person match {
       case Some(person) => assertEquals(johannes, person)
-      case _ => error("No match")
+      case _ => sys.error("No match")
     }
   }
   
@@ -79,7 +79,7 @@ class PersonTest extends EmptyTest {
 
     person match {
       case None => "OK"
-      case _ => error("Unexpected match")
+      case _ => sys.error("Unexpected match")
     }
   }
 
@@ -91,7 +91,7 @@ class PersonTest extends EmptyTest {
     
     addresses match {
       case Some(addresses) => assertEquals(alf.emailAddresses, addresses)
-      case _ => error("No match")
+      case _ => sys.error("No match")
     }
   }
 
@@ -103,7 +103,7 @@ class PersonTest extends EmptyTest {
     
     person match {
       case Some(person) => assertEquals(fredrik, person)
-      case _ => error("No match")
+      case _ => sys.error("No match")
     }
   }
   
