@@ -15,7 +15,7 @@ class TupleTestMatchTest extends EmptyTest {
 
     simpleTuple match {
       // Match on the tuple, and assert that its the same => assertEquals(simpleTuple, (one, two))
-      case _ => error("Couldnt match it")
+      case _ => sys.error("Couldnt match it")
     }
   }
   
@@ -27,7 +27,7 @@ class TupleTestMatchTest extends EmptyTest {
       case (one, _) => assertEquals(2, one)
       // Comment in this line and make this run, (hint create guard on the previous match, so that it won't hit)
       // case (one, _) => assertEquals(1, one)
-      case _ => error("Couldnt match it")
+      case _ => sys.error("Couldnt match it")
     }
   }
 
@@ -37,8 +37,8 @@ class TupleTestMatchTest extends EmptyTest {
     
     simpleTuple match {
       // Match on the tuple, and assert with assertFalse(three)
-      case (one, two, three: String) => error("this is not a Tuple3 with last element Boolean")
-      case _ => error("Couldnt match it")
+      case (one, two, three: String) => sys.error("this is not a Tuple3 with last element Boolean")
+      case _ => sys.error("Couldnt match it")
     }
   }
 }

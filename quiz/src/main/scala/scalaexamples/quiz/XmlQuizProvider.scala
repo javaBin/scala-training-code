@@ -15,6 +15,6 @@ class XmlQuizProvider(file: String) extends QuizProvider {
   /**
    * TODO: Implement parsing of the XML into a Quiz object with questions and answers
    */
-  private def parseXml(xml: Elem): Quiz = error("Not implemented")
+  private def parseXml(xml: Elem): Quiz = sys.error("Not implemented")
   
 }

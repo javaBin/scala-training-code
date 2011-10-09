@@ -25,7 +25,7 @@ class MyCaseClassMatchingTest extends EmptyTest {
      
      def matchSubType(myType: MyCaseClass) = myType match {
        // Add match expressions which make the following code pass.
-       case _ => error("Should never reach this")
+       case _ => sys.error("Should never reach this")
      }
 
      // You should not change the following code at all. Only add matches which will make the tests match.
