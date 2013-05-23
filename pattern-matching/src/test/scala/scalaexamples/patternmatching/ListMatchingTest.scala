@@ -54,16 +54,26 @@ class ListMatchingTest extends EmptyTest  {
     assertEquals(list, mathedElement)
   }
   
-  @Test def matchNestedElementOfList {
+  @Test 
+  def matchNestedElementOfList {
     val subList = List("Indeed", "it", "is")
 	val list = List("Scala", "is", "powerful", subList)
  
 	// Here you must find the first element of the second sublist
-    val mathedElement = list match {
-      case List(_, _, _, List(matched, _ *)) => matched
-      case _ => "failed"
-    }
-    assertEquals(subList(0), mathedElement)
+    // Insert you match statement here
+    def findSublist(listOfList:List[Object]): String  =
+      listOfList match {
+        case head :: tail => {
+    	  if ( head.isInstanceOf[List[String]]) {
+            head.asInstanceOf[List[String]].head
+          }
+          else findSublist(tail)
+        }
+        case _ => "failed"
+      }
+    val matchedElement = findSublist(list)
+    
+    assertEquals(subList(0), matchedElement)
   }
   
   
