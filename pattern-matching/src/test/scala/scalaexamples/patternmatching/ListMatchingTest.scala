@@ -66,5 +66,23 @@ class ListMatchingTest extends EmptyTest  {
     assertEquals(subList(0), mathedElement)
   }
   
-  
+  @Test def matchNestedElementOfListWithHeadTailPatternMatching {
+    val subList = List("Indeed", "it", "is")
+	val list = List("Scala", "is", "powerful", subList)
+ 
+	// Here you must find the first element of the second sublist
+	// like in the example above but using head tail pattern matching
+	@annotation.tailrec
+	def findSublist(listOfList:List[Any]): String  =
+	  listOfList match {
+	    case head :: tail => head match {
+	      case (head: String) :: _ => head
+	      case _ => findSublist(tail)
+	    }
+	    case _ => "failed"
+	  }
+    val matchedElement = findSublist(list)
+    
+    assertEquals(subList(0), matchedElement)
+  }
 }
