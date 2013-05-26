@@ -74,7 +74,7 @@ class ListMatchingTest extends EmptyTest  {
  
 	// Here you must find the first element of the second sublist
 	// like in the example above but using head tail pattern matching
-	def findSublist(listOfList:List[Any]): String  = list match {
+	def findSublist(listOfList:List[Any]): String  = listOfList match {
       // Insert you match statement here
       case _ => "failed"
     }
