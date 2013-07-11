@@ -70,7 +70,7 @@ class PersonTest extends EmptyTest {
   def testFindByName {
     // Find the person named "Johannes" in the list of persons
     val name = "Johannes"
-    val person: Option[Person] = null
+    val person: Option[Person] = None
     
     person match {
       case Some(person) => assertEquals(johannes, person)
@@ -82,7 +82,8 @@ class PersonTest extends EmptyTest {
   def testFindByName2 {
     // Find the person named "Jon-Anders" (should not match)
     val name = "Jon-Anders"
-    val person: Option[Person] = null
+    // replace with find expression
+    val person: Option[Person] = Some(persons(0))
 
     person match {
       case None => "OK"
@@ -96,7 +97,7 @@ class PersonTest extends EmptyTest {
     // Here you must first find the person, 
     // then map the collection to a different type
     val name = "Alf"
-    val addresses: Option[List[EmailAddress]] = null
+    val addresses: Option[List[EmailAddress]] = None
     
     addresses match {
       case Some(addresses) => assertEquals(alf.emailAddresses, addresses)
@@ -112,7 +113,7 @@ class PersonTest extends EmptyTest {
     // there exists an email address matching the criteria in the
     // person's list of email addresses.
     val address = EmailAddress("fredrik@vraalsen.no")
-    val person: Option[Person] = null
+    val person: Option[Person] = None
     
     person match {
       case Some(person) => assertEquals(fredrik, person)
