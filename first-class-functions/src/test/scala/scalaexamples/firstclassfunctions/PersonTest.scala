@@ -78,7 +78,7 @@ class PersonTest extends EmptyTest {
     val person = persons find(_.name == name)
 
     person match {
-      case None => "OK"
+      case None => () // OK
       case _ => sys.error("Unexpected match")
     }
   }
@@ -99,7 +99,7 @@ class PersonTest extends EmptyTest {
   def testFindPersonByEmail {
     // Find the person who has the e-mail address "fredrik@vraalsen.no"
     val address = EmailAddress("fredrik@vraalsen.no")
-    val person = persons find(_.emailAddresses exists (address ==))
+    val person = persons find(_.emailAddresses exists (address == _))
     
     person match {
       case Some(person) => assertEquals(fredrik, person)

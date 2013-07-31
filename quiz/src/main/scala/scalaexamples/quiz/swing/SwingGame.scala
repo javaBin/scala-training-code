@@ -1,10 +1,10 @@
 package scalaexamples.quiz.swing
 
 import scala.swing._
-import scala.swing.Swing._
 import event._
 import javax.swing.border.EmptyBorder
 import scalaexamples.quiz.Quiz
+import scala.language.reflectiveCalls
 
 class SwingGame(quiz: Quiz) extends MainFrame {
   val qsize = quiz.questions.size
@@ -23,9 +23,9 @@ class SwingGame(quiz: Quiz) extends MainFrame {
     }
     new ButtonGroup(buttons: _*)
     new BoxPanel(Orientation.Vertical) {
-        val allButtons = buttons
-        contents += new Label(q.text)
-    	contents.appendAll(buttons)
+      val allButtons = buttons
+      contents += new Label(q.text)
+      contents.appendAll(buttons)
     }
   }
 

@@ -39,7 +39,7 @@ class ConsoleGame(quiz: Quiz) {
         }
       }
       catch {
-        case e => println("Incorrect answer"); None
+        case e: Exception => println("Incorrect answer"); None
       }
      }
     answer.get
