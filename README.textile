@@ -20,6 +20,12 @@ All the tasks have been solved in a Git branch called 'solutions'. You may also 
 
 "solutions.zip":http://github.com/javaBin/scala-training-code/zipball/solutions       
 
+h3. Requests and contributions
+
+This project was initiated in 2009. It was used for training lessons for the Norwegian Scala community. It is not actively maintained by us anymore. However, every now and then, people send us request for improvements. We are totally psycked that people are still using it.
+
+However, we would greatly appreciate pull requests if you want something changed. 'Cause Then we don't need to do too much work ourselves! :)
+
 h3. License
 
 The training course is licensed under "Creative Commons Attribution 3.0 Unported":http://creativecommons.org/licenses/by/3.0/.
