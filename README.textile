@@ -22,9 +22,9 @@ All the tasks have been solved in a Git branch called 'solutions'. You may also 
 
 h3. Requests and contributions
 
-This project was initiated in 2009. It was used for training lessons for the Norwegian Scala community. It is not actively maintained by us anymore. However, every now and then, people send us request for improvements. We are totally psycked that people are still using it.
+This project was initiated in 2009. It was used for training lessons for the Norwegian Scala community. It is not actively maintained by us anymore. However, every now and then, people send us request for improvements. We are totally psyched that people are still using it.
 
-However, we would greatly appreciate pull requests if you want something changed. 'Cause Then we don't need to do too much work ourselves! :)
+However, we would greatly appreciate pull requests if you want something changed. 'Cause then we don't need to do too much work ourselves! :)
 
 h3. License
 
