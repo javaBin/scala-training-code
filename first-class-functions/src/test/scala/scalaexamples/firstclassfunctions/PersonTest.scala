@@ -86,7 +86,7 @@ class PersonTest extends EmptyTest {
     val person: Option[Person] = Some(persons(0))
 
     person match {
-      case None => "OK"
+      case None => () // OK
       case _ => sys.error("Unexpected match")
     }
   }
@@ -114,7 +114,7 @@ class PersonTest extends EmptyTest {
     // person's list of email addresses.
     val address = EmailAddress("fredrik@vraalsen.no")
     val person: Option[Person] = None
-    
+
     person match {
       case Some(person) => assertEquals(fredrik, person)
       case _ => sys.error("No match")

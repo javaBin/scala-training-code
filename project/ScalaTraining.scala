@@ -8,8 +8,9 @@ object BuildSettings {
   val globalSettings = Seq(
     organization := "no.scalabin.scala-examples",
     version := "0.1-SNAPSHOT",
-    scalaVersion := "2.9.1",
+    scalaVersion := "2.10.2",
     scalacOptions += "-deprecation",
+    scalacOptions += "-feature",
     libraryDependencies ++= Seq(junit, junitInterface)
   )
   val projectSettings = Defaults.defaultSettings ++ globalSettings

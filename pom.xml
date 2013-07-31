@@ -10,8 +10,7 @@
     <inceptionYear>2009</inceptionYear>
 
     <properties>
-        <scala.version>2.9.1</scala.version>
-        <scala-plugin.version>2.14</scala-plugin.version>
+        <scala.version>2.10.2</scala.version>
     </properties>
 
     <repositories>
@@ -37,20 +36,12 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.8.1</version>
+            <version>4.11</version>
         </dependency>
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
-        </dependency>
-
-        <!-- Pleasing IntelliJ, so it is not necessary to add scala compiler to module when opening project. -->
-        <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-compiler</artifactId>
-            <version>${scala.version}</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -69,48 +60,18 @@
     <build>
         <sourceDirectory>src/main/scala</sourceDirectory>
         <testSourceDirectory>src/test/scala</testSourceDirectory>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-            </resource>
-            <resource>
-                <directory>src/main/scala</directory>
-                <includes>
-                    <include>**</include>
-                </includes>
-                <excludes>
-                    <exclude>**/*.scala</exclude>
-                </excludes>
-            </resource>
-        </resources>
-        <testResources>
-            <testResource>
-                <directory>src/test/resources</directory>
-                <includes>
-                    <include>**</include>
-                </includes>
-                <excludes>
-                    <exclude>**/*.scala</exclude>
-                </excludes>
-            </testResource>
-        </testResources>
         <plugins>
             <plugin>
-                <groupId>org.scala-tools</groupId>
-                <artifactId>maven-scala-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-eclipse-plugin</artifactId>
-                <version>2.5.1</version>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
             </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.scala-tools</groupId>
-                    <artifactId>maven-scala-plugin</artifactId>
-                    <version>${scala-plugin.version}</version>
+                    <groupId>net.alchim31.maven</groupId>
+                    <artifactId>scala-maven-plugin</artifactId>
+                    <version>3.1.5</version>
                     <executions>
                         <execution>
                             <goals>
@@ -121,6 +82,11 @@
                     </executions>
                     <configuration>
                         <scalaVersion>${scala.version}</scalaVersion>
+                        <args>
+                            <arg>-unchecked</arg>
+                            <arg>-feature</arg>
+                            <arg>-deprecation</arg>
+                        </args>
                     </configuration>
                 </plugin>
                 <plugin>

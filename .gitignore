@@ -19,3 +19,4 @@ TAGS
 lib_managed/
 boot/
 .scala_dependencies
+.cache

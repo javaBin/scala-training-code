@@ -2,9 +2,8 @@ package scalaexamples.quiz.swing
 
 import scala.swing._
 import scala.swing.Swing._
-import event._
 import scalaexamples.quiz.Quiz
-
+import scala.language.reflectiveCalls
 
 class SwingGame(quiz: Quiz) extends MainFrame {
 
